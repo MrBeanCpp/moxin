@@ -48,8 +48,12 @@ impl WidgetNode for PortalView {
         self.view.redraw(cx);
     }
 
-    fn find_widgets(&mut self, path: &[LiveId], cached: WidgetCache, results: &mut WidgetSet) {
+    fn find_widgets(&self, path: &[LiveId], cached: WidgetCache, results: &mut WidgetSet) {
         self.view.find_widgets(path, cached, results);
+    }
+
+    fn uid_to_widget(&self, ui: WidgetUid) -> WidgetRef {
+        self.view.uid_to_widget(ui)
     }
 }
 
@@ -147,8 +151,12 @@ impl WidgetNode for Portal {
         }
     }
 
-    fn find_widgets(&mut self, path: &[LiveId], cached: WidgetCache, results: &mut WidgetSet) {
+    fn find_widgets(&self, path: &[LiveId], cached: WidgetCache, results: &mut WidgetSet) {
         self.view.find_widgets(path, cached, results);
+    }
+
+    fn uid_to_widget(&self, ui: WidgetUid) -> WidgetRef {
+        self.view.uid_to_widget(ui)
     }
 }
 
