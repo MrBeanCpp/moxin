@@ -72,14 +72,14 @@ live_design! {
                             system_prompt = <MoxinTextInput> {
                                 width: Fill,
                                 height: Fit,
-                                empty_message: "Enter a system prompt"
+                                empty_text: "Enter a system prompt"
                                 draw_bg: {
                                     radius: 0
                                     color: #0000
                                     border_width: 0
                                 }
-                                draw_text: {
-                                    text_style: {font_size: 10},
+                                draw_label: {
+                                    text_style: <REGULAR_FONT>{font_size: 10},
                                 }
                             }
                         }
@@ -164,14 +164,14 @@ live_design! {
                                 stop = <MoxinTextInput> {
                                     width: Fill,
                                     height: Fit,
-                                    empty_message: " "
+                                    empty_text: " "
                                     draw_bg: {
                                         radius: 0,
                                         color: #0000,
                                         border_width: 0,
                                     }
-                                    draw_text: {
-                                        text_style: {font_size: 10},
+                                    draw_label: {
+                                        text_style: <REGULAR_FONT>{font_size: 10},
                                     }
                                 }
                             }

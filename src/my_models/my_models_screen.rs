@@ -103,9 +103,9 @@ live_design! {
             width: 260,
             height: Fit,
 
-            empty_message: "Filter files"
+            empty_text: "Filter files"
 
-            draw_text: {
+            draw_label: {
                 text_style:<REGULAR_FONT>{font_size: 11},
             }
         }
