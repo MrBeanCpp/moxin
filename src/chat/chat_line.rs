@@ -402,14 +402,14 @@ impl ChatLine {
 
 impl ChatLineRef {
     pub fn set_sender_name(&mut self, text: &str) {
-        let Some(mut inner) = self.borrow_mut() else {
+        let Some(inner) = self.borrow_mut() else {
             return;
         };
         inner.label(id!(sender_name)).set_text(text);
     }
 
     pub fn set_avatar_text(&mut self, text: &str) {
-        let Some(mut inner) = self.borrow_mut() else {
+        let Some(inner) = self.borrow_mut() else {
             return;
         };
         inner.label(id!(avatar_label)).set_text(text);
@@ -467,7 +467,7 @@ impl ChatLineRef {
     }
 
     pub fn set_regenerate_button_visible(&mut self, visible: bool) {
-        let Some(mut inner) = self.borrow_mut() else {
+        let Some(inner) = self.borrow_mut() else {
             return;
         };
         inner.button(id!(save_and_regenerate)).set_visible(visible);

@@ -249,11 +249,6 @@ impl MatchEvent for App {
                 discover_radio_button.select(cx, &mut Scope::empty());
             }
 
-            if let ChatAction::Resume = action.as_widget_action().cast() {
-                let chat_radio_button = self.ui.radio_button(id!(chat_tab));
-                chat_radio_button.select(cx, &mut Scope::empty());
-            }
-
             match action.as_widget_action().cast() {
                 TooltipAction::Show(text, pos) => {
                     let mut tooltip = self.ui.tooltip(id!(tooltip));
